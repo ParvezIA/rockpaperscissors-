@@ -1,15 +1,16 @@
 function getComputerPlay() {
-    let random = Math.random() * 1;
+    const random = Math.floor(Math.random()*3);
     let rock = "Rock";
     let paper = "Paper";
     let scissor = "Scissor";
 
-    if (random => 0.33333) {
+    if (random == 0) {
         return rock;
-    } else if (random => 0.66666) {
+    } else if (random == 1) {
         return paper;
     } else {
         return scissor;
     }
 }
 
+getComputerPlay();
