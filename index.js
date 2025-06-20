@@ -1,4 +1,4 @@
-function getComputerPlay() {
+function getComputerChoice() {
     const random = Math.floor(Math.random()*3);
     let rock = "Rock";
     let paper = "Paper";
@@ -13,4 +13,4 @@ function getComputerPlay() {
     }
 }
 
-getComputerPlay();
+getComputerChoice();
