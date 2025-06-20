@@ -1,16 +1,23 @@
+
+function getHumanChoice() {
+    let askHuman= prompt("Select rock, Paper or scissors" );
+
+    return askHuman;
+}
+
 function getComputerChoice() {
     const random = Math.floor(Math.random()*3);
-    let rock = "Rock";
-    let paper = "Paper";
-    let scissor = "Scissor";
 
     if (random == 0) {
-        return rock;
+        return "rock";
     } else if (random == 1) {
-        return paper;
+        return "paper";
     } else {
-        return scissor;
+        return "scissor";
     }
 }
 
-getComputerChoice();
+console.log("You pick :", getHumanChoice());
+
+
+console.log("computer picks :", getComputerChoice());
