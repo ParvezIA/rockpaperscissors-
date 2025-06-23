@@ -1,6 +1,7 @@
 
 function getHumanChoice() {
     let askHuman= prompt("Select rock, Paper or scissors" ); 
+    return askHuman;
 }
 
 function getComputerChoice() {
