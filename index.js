@@ -18,7 +18,7 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice()) {
+function playRound(humanChoice, computerChoice) {
 
     if (humanChoice == "rock" && computerChoice == "rock") {
         console.log("its a draw");
@@ -47,4 +47,7 @@ function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerC
     }
 }
 
-console.log(playRound());
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
