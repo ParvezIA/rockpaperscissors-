@@ -1,6 +1,6 @@
 
 function getHumanChoice() {
-    let askHuman= prompt("Select rock, Paper or scissors" ); 
+    let askHuman= prompt("Select rock, Paper or scissor" ); 
     return askHuman;
 }
 
@@ -16,10 +16,13 @@ function getComputerChoice() {
     }
 } 
 
-let humanScore = 0;
-let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    let i;
+
+    function playRound(humanChoice, computerChoice) {
 
     console.log("you chose :" + humanChoice);
     console.log("computer chose :" + computerChoice);
@@ -39,7 +42,7 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
     } else if (humanChoice == "paper" && computerChoice == "paper") {
         console.log("its a draw"); 
-    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+    } else if (humanChoice == "paper" && computerChoice == "scissor") {
     console.log("computer wins");
     computerScore++;
     } else if (humanChoice == "scissor" && computerChoice == "rock") {
@@ -50,10 +53,26 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
     } else if (humanChoice == "scissor" && computerChoice == "scissor") {
         console.log("its a draw");
+    } else {
+        alert("Please enter Rock, Paper or Scissor")
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+for (i = 0; i <= 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+}
+
+if (humanScore > computerScore) {
+    console.log("Your score is " + humanScore, "\ncomputer score is " + computerScore, "\nYour the winner of this Round ");
+} else if (humanScore < computerScore) {
+    console.log("Your score is " + humanScore, "\ncomputer score is " + computerScore, "\nYour the winner of the Round ");
+} else {
+    console.log("Your score is " + humanScore, "\ncomputer score is " + computerScore, "\nBoth have same point, it's a draw");
+}
+
+}
+
+playGame();
