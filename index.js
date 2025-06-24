@@ -21,6 +21,11 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
+    console.log("you chose :" + humanChoice);
+    console.log("computer chose :" + computerChoice);
+
+     humanChoice = humanChoice.toLowerCase();
+
     if (humanChoice == "rock" && computerChoice == "rock") {
         console.log("its a draw");
     } else if (humanChoice == "rock" && computerChoice == "paper") {
